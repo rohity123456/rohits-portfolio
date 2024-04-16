@@ -1,0 +1,7 @@
+.nav {
+  @apply absolute sm:flex sm:relative items-center justify-center flex-col sm:flex-row sm:top-0 xs:max-sm:dark:bg-zinc-900 bg-gray-50 w-full z-10 p-2 sm:bg-transparent;
+  transition: transform 0.3s ease-in-out;
+  .ul {
+    @apply flex flex-col items-center sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4;
+  }
+}
