@@ -32,7 +32,10 @@ const Header = () => {
   };
   const ThemeSwitch = theme === 'dark' ? FaSun : FaMoon;
   return (
-    <header className='bg-gray-95 min-h-10 relative' ref={headerRef}>
+    <header
+      className='bg-gray-300 dark:bg-zinc-800 min-h-15 sticky top-0 z-10'
+      ref={headerRef}
+    >
       <div className='container mx-auto flex justify-center items-center'>
         <div
           className='sm:hidden absolute top-1 left-2 cursor-pointer'

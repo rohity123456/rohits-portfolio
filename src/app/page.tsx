@@ -2,13 +2,12 @@ import ContactSection from './components/contactSection';
 import HeroSection from './components/heroSection';
 import ProjectsSection from './components/projectsSection';
 import SkillsSection from './components/skillsSection';
-import { getSkills } from './data';
 
 export default function Home() {
   const sections = [
     {
       name: 'Skills',
-      component: <SkillsSection skills={getSkills()} />
+      component: <SkillsSection />
     },
     {
       name: 'Projects',
