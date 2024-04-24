@@ -4,19 +4,15 @@ import { useEffect, useRef, useState } from 'react';
 import styles from './index.module.scss';
 import { IoMenuSharp, IoCloseCircleOutline } from 'react-icons/io5';
 import { FaMoon, FaSun } from 'react-icons/fa';
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const headerRef = useRef<HTMLHeadElement>(null);
   function handleClickOutside(event: MouseEvent) {
-    if (
-      headerRef.current &&
-      !headerRef.current.contains(event.target as Node)
-    ) {
-      console.log('Clicked outside of component');
+    if (headerRef.current && !headerRef.current.contains(event.target as Node))
       setIsOpen(false);
-    }
   }
   useEffect(() => {
     document.addEventListener('click', handleClickOutside);
@@ -33,12 +29,12 @@ const Header = () => {
   const ThemeSwitch = theme === 'dark' ? FaSun : FaMoon;
   return (
     <header
-      className='bg-gray-300 dark:bg-zinc-800 min-h-15 sticky top-0 z-10'
+      className='bg-gray-300 dark:bg-zinc-800 min-h-12 sticky top-0 z-10 flex'
       ref={headerRef}
     >
       <div className='container mx-auto flex justify-center items-center'>
         <div
-          className='sm:hidden absolute top-1 left-2 cursor-pointer'
+          className='sm:hidden absolute left-2 cursor-pointer top-1/2 -translate-y-1/2'
           onClick={() => setTimeout(() => setIsOpen(!isOpen), 0)}
         >
           {isOpen ? (
@@ -51,7 +47,7 @@ const Header = () => {
         <ThemeSwitch
           onClick={() => setTimeout(() => toggleTheme(), 0)}
           size={30}
-          className='absolute right-0 top-1 cursor-pointer dark:text-yellow-300 text-blue-600'
+          className='absolute right-0 top-1/2 -translate-y-1/2 cursor-pointer dark:text-yellow-300 text-blue-600'
         >
           {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
         </ThemeSwitch>
@@ -73,17 +69,24 @@ const NavBar: React.FC<NavBarProps> = ({ isOpen, handleLinkClick }) => {
     { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' }
   ];
+  const path = usePathname();
+
   return (
     <nav
       className={`${
         isOpen
-          ? 'xs:max-sm:-top-1/2 xs:translate-y-0 xs:max-sm:mt-14'
+          ? 'xs:max-sm:top-full top-1/2 xs:max-sm:-translate-y-1/4 xs:max-sm:mt-14'
           : 'xs:max-sm:-translate-y-full'
       } ${styles.nav}`}
     >
       <ul className={styles.ul} onClick={handleLinkClick}>
         {links.map((link) => (
-          <li key={link.name}>
+          <li
+            key={link.name}
+            className={`${styles.li} ${
+              path.includes(link.href) ? 'text-primary' : ''
+            }`}
+          >
             <a href={link.href} className='hover:text-primary'>
               {link.name}
             </a>

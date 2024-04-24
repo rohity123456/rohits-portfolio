@@ -1,8 +1,9 @@
+import { MediaObject } from '@/types';
+
 export type Project = {
   id: number;
   title: string;
   description: string;
-  imageUrl: string;
-  demoUrl: string;
   repoUrl: string;
+  mediaList: MediaObject[];
 };

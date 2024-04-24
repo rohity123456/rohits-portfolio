@@ -1,7 +1,7 @@
 'use client';
 type ButtonProps = {
   children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'danger';
+  variant?: 'primary' | 'secondary' | 'danger' | 'none';
   className?: string;
   onClick: () => void;
 };
@@ -16,7 +16,8 @@ const Button = ({
   const variantStyle = {
     primary: 'btn-primary',
     secondary: 'btn-secondary',
-    danger: 'btn-error'
+    danger: 'btn-error',
+    none: ''
   };
 
   return (

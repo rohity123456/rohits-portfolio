@@ -14,3 +14,11 @@ export type ViewPorts =
   | 'max-lg'
   | 'max-xl'
   | 'max-2xl';
+
+export type MediaObject = {
+  id: string;
+  type: 'image' | 'video';
+  src: string;
+  name: string;
+  poster?: string;
+};
