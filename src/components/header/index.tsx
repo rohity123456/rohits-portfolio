@@ -5,6 +5,7 @@ import styles from './index.module.scss';
 import { IoMenuSharp, IoCloseCircleOutline } from 'react-icons/io5';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -62,12 +63,12 @@ interface NavBarProps {
 }
 const NavBar: React.FC<NavBarProps> = ({ isOpen, handleLinkClick }) => {
   const links = [
-    { name: 'Home', href: '#home' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Blog', href: '#blog' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'About', href: '#about' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Home', href: '/' },
+    { name: 'Skills', href: '/#skills' },
+    { name: 'Projects', href: '/#projects' },
+    { name: 'Experience', href: '/experience' },
+    { name: 'About', href: '/#about' },
+    { name: 'Contact', href: '/#contact' }
   ];
   const path = usePathname();
 
@@ -87,9 +88,9 @@ const NavBar: React.FC<NavBarProps> = ({ isOpen, handleLinkClick }) => {
               path.includes(link.href) ? 'text-primary' : ''
             }`}
           >
-            <a href={link.href} className='hover:text-primary'>
+            <Link href={link.href} className='hover:text-primary'>
               {link.name}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
