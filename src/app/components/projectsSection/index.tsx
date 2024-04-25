@@ -1,10 +1,9 @@
 import ProjectCard from '@/pages/projects/components/projectCard';
 import { getProjects } from '@/service/project';
-
 type ProjectsSectionProps = {};
+
 const ProjectsSection: React.FC<ProjectsSectionProps> = async ({}) => {
   const projects = await getProjects();
-  console.log('projects : ', projects[0].mediaList);
   return (
     <section>
       <div className='flex flex-wrap justify-center gap-4'>
