@@ -46,14 +46,14 @@ const Carousel: React.FC<CarouselProps> = ({ media, isAutoSlide }) => {
             poster={item.poster}
             className='w-full h-full object-cover'
           >
-            <source src={item.src} type='video/mp4' />
+            <source src={item.url} type='video/mp4' />
           </video>
         );
       case 'image':
         return (
           <Image
             key={item.id}
-            src={item.src}
+            src={item.url}
             alt={item.name}
             width={150}
             height={150}

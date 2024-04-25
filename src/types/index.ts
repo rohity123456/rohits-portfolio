@@ -18,7 +18,7 @@ export type ViewPorts =
 export type MediaObject = {
   id: string;
   type: 'image' | 'video';
-  src: string;
+  url: string;
   name: string;
   poster?: string;
 };
