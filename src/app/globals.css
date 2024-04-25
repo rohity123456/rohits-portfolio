@@ -9,11 +9,11 @@
 
 html[data-theme='dark'] {
   --foreground: rgb(255, 255, 255);
-  --background: rgb(28, 28, 28);
+  --background: rgb(45 44 44);
 }
 html {
   scroll-behavior: smooth;
-  background: var(--background);
+  background: var(--background) !important;
 }
 body {
   color: var(--foreground);
