@@ -8,7 +8,7 @@ type ExperienceItemProps = {
 
 const ExperienceItem: React.FC<ExperienceItemProps> = ({ experience }) => {
   return (
-    <div className='mb-8 relative before:content-[""] before:w-5 before:rounded-full before:h-5 before:bg-primary before:absolute before:-left-7 before:top-1'>
+    <div className='mb-8 relative before:content-[""] before:w-5 before:rounded-full before:h-5 before:bg-primary before:absolute before:-left-7 before:top-1 before:ml-[0.9px] after:content-[""] after:w-1 after:h-5 after:bg-primary after:absolute after:-left-5 after:-top-1 after:ml-[0.9px]'>
       <h3 className='text-xl font-bold'>
         {experience.title} - {experience.company}
       </h3>
@@ -18,9 +18,12 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ experience }) => {
       </p>
       <ul className='list-disc ml-5 mt-2'>
         {experience.description.map((item, index) => (
-          <li key={index} className=''>
+          <div
+            key={index}
+            className='relative before:content-[""] before:w-7 before:h-[0.5px] before:bg-primary before:absolute before:-left-9 before:top-[10px]'
+          >
             <RichTextParser text={item} />
-          </li>
+          </div>
         ))}
       </ul>
     </div>
