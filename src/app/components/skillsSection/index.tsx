@@ -17,7 +17,7 @@ import {
 } from 'react-icons/fa';
 import { FcCollaboration, FcGoogle } from 'react-icons/fc';
 import { IoIosArrowDropdownCircle } from 'react-icons/io';
-import { MdMarkChatRead } from 'react-icons/md';
+import { MdMarkChatRead, MdOutlineJoinFull } from 'react-icons/md';
 import { RiTeamLine } from 'react-icons/ri';
 import { SiDavinciresolve, SiPostgresql } from 'react-icons/si';
 import { TbBrandNextjs } from 'react-icons/tb';
@@ -143,6 +143,11 @@ const getSkills = (): SkillsSection[] => {
         {
           name: 'Problem Solving',
           icon: <SiDavinciresolve size={25} className='text-green-400' />,
+          category: 'soft-skills'
+        },
+        {
+          name: 'Problem Solving',
+          icon: <MdOutlineJoinFull size={25} className='text-purple-500' />,
           category: 'soft-skills'
         }
       ]
