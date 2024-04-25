@@ -41,17 +41,7 @@ const getSkills = (): SkillsSection[] => {
       icon: <FaMobile className='text-blue-500' />,
       skills: [
         {
-          name: 'HTML',
-          icon: <FaHtml5 size={25} className='text-orange-400' />,
-          category: 'frontend'
-        },
-        {
-          name: 'CSS',
-          icon: <FaCss3 size={25} className='text-blue-400' />,
-          category: 'frontend'
-        },
-        {
-          name: 'JavaScript',
+          name: 'JavaScript(with TS)',
           icon: <FaJs size={25} className='text-yellow-300' />,
           category: 'frontend'
         },
@@ -65,6 +55,16 @@ const getSkills = (): SkillsSection[] => {
           icon: (
             <TbBrandNextjs size={25} className='text-black dark:text-white' />
           ),
+          category: 'frontend'
+        },
+        {
+          name: 'HTML',
+          icon: <FaHtml5 size={25} className='text-orange-400' />,
+          category: 'frontend'
+        },
+        {
+          name: 'CSS',
+          icon: <FaCss3 size={25} className='text-blue-400' />,
           category: 'frontend'
         }
       ]
