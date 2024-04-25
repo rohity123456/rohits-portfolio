@@ -11,12 +11,12 @@ const experiences: Experience[] = [
     endDate: 'March 2024',
     description: [
       'Lead the development of Vidiofy from an <fontStyle value="bold">Idea --> POC --> live product</fontStyle> used by 1000+ users daily.',
-      'Significantly enhanced video generation speed by implementing parallelization in video generation pipeline, resulting in over 100% improvement in performance.',
-      'Designed and implemented dynamic video templates, enabling easy creation of videos for voice, non-voice, and avatar narrations using the same template. This eliminated the need for separate templates for each narration type, resulting in improved efficiency and streamlined video production processes.',
+      'Significantly enhanced video generation speed by implementing parallelization in video generation pipeline, resulting in over <fontStyle value="bold">100%</fontStyle> improvement in performance.',
+      'Designed and implemented dynamic video templates, enabling easy creation of videos for voice, non-voice, and avatar narrations using the same template. This <fontStyle value="bold">eliminated</fontStyle> the need for separate templates for each narration type, resulting in improved efficiency and streamlined video production processes.',
       `Managed Vidiofy's voice and avatar libraries, also added feature for users to create their own voices and avatars.`,
-      'Developed various features including synchronized captions, linear video narration, template customization, among others.',
+      'Developed various features including <fontStyle value="bold">synchronized captions, linear video narration, template customization</fontStyle>, among others.',
       'Integrated mixpanel analytics to track product usage and user behavior, providing valuable insights for decision-making.',
-      'Tech/Tools : React (Next JS), Python, Typescript, Mongo, AWS, LLMs, CI/CD, New Relic, Sentry, etc.'
+      '<fontStyle value="bold">Tech/Tools :</fontStyle> React (Next JS), Python, Typescript, Mongo, AWS, LLMs, CI/CD, New Relic, Sentry, etc.'
     ]
   },
   {
@@ -28,11 +28,11 @@ const experiences: Experience[] = [
     endDate: 'March 2023',
     description: [
       `Worked as a senior fullstack engineer, designing and developing key features for the app. `,
-      `Built a calendar-based content planning tool from scratch helping users plan and schedule their content.`,
+      `Built a <fontStyle value="bold">calendar-based</fontStyle> content planning tool from scratch helping users plan and schedule their content.`,
       `Created an advanced-level photo editor from the ground up, with all required photo editing features.`,
-      `Integrated the product analytics provider mixpanel and implemented event tracking throughout the app.`,
+      `Integrated the product analytics provider mixpanel and implemented <fontStyle value="bold">event tracking</fontStyle> throughout the app.`,
       `Developed a standalone designer app for the company's designers to create design templates.`,
-      `Tech/Tools : React (Next JS), Node Js, Typescript, Mongo, AWS, CI/CD, etc.`
+      `<fontStyle value="bold">Tech/Tools :</fontStyle> React (Next JS), Node Js, Typescript, Mongo, AWS, CI/CD, etc.`
     ]
   },
   {
@@ -43,10 +43,10 @@ const experiences: Experience[] = [
     startDate: 'May 2021',
     endDate: 'March 2022',
     description: [
-      `Worked with Fragma's client Mashreq Global Services to build their product Nitro Advanced Analytics right from very initial stages of development.`,
+      `Worked with Fragma's client Mashreq Global Services to build their product <fontStyle value="bold">Nitro Advanced Analytics</fontStyle> right from very initial stages of development.`,
       `Created chart components library as per Nitro's design system which hugely reduced development effort.`,
-      `Used test libraries like jest and enzyme to write unit test cases following test driven development.`,
-      `Tech/Tools : React JS, Node Js, Typescript, Mongo, Azure DevOps, etc.`
+      `Used test libraries like jest and <fontStyle value="bold">enzyme</fontStyle> to write unit test cases following test driven development.`,
+      `<fontStyle value="bold">Tech/Tools :</fontStyle> React JS, Node Js, Typescript, Mongo, Azure DevOps, etc.`
     ]
   },
   {
@@ -57,10 +57,10 @@ const experiences: Experience[] = [
     startDate: 'July 2019',
     endDate: 'May 2021',
     description: [
-      `Worked on Vistaar's SaaS based product named "Price Structure Management (PSM)" which drives companies 70% revenue. PSM helps businesses optimize there pricing needs.`,
+      `Worked on Vistaar's SaaS based product named <fontStyle value="bold">"Price Structure Management (PSM)"</fontStyle> which drives companies 70% revenue. PSM helps businesses optimize there pricing needs.`,
       `Worked on multple products like Chain Plan Management, Combo Management, Control State Planner.`,
       `Debugged the complete project and fixed numerous issues, resulting in improved overall performance.`,
-      `Tech/Tools : React JS, Ext Js, SQL, Mongo, AWS etc.`
+      `<fontStyle value="bold">Tech/Tools :</fontStyle> React JS, Ext Js, SQL, Mongo, AWS etc.`
     ]
   }
 ];
