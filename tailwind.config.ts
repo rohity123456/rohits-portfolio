@@ -19,38 +19,20 @@ const config: Config = {
   variants: ['dark', 'dark-hover', 'dark-group-hover', 'dark-even', 'dark-odd'],
   daisyui: {
     themes: [
-      'light',
-      'dark',
-      'cupcake',
-      'bumblebee',
-      'emerald',
-      'corporate',
-      'synthwave',
-      'retro',
-      'cyberpunk',
-      'valentine',
-      'halloween',
-      'garden',
-      'forest',
-      'aqua',
-      'lofi',
-      'pastel',
-      'fantasy',
-      'wireframe',
-      'black',
-      'luxury',
-      'dracula',
-      'cmyk',
-      'autumn',
-      'business',
-      'acid',
-      'lemonade',
-      'night',
-      'coffee',
-      'winter',
-      'dim',
-      'nord',
-      'sunset'
+      {
+        light: {
+          ...require('daisyui/src/theming/themes')['light'],
+          primary: '#6b705c',
+          secondary: '#ef233c'
+        }
+      },
+      {
+        dark: {
+          ...require('daisyui/src/theming/themes')['dark'],
+          primary: '#a2d2ff',
+          secondary: '#bde0fe'
+        }
+      }
     ]
   }
 };
