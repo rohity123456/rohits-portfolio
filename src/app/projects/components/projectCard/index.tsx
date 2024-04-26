@@ -6,7 +6,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   const { title, description, repoUrl, mediaList } = project;
   return (
     <div className='card w-96 bg-base-100 shadow-xl'>
-      <div className='card-body'>
+      <div className='card-body w-full h-72'>
         <Carousel media={mediaList} isAutoSlide={true} />
       </div>
       <div className='card-body'>

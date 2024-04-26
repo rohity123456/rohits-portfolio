@@ -57,7 +57,7 @@ const Carousel: React.FC<CarouselProps> = ({ media, isAutoSlide }) => {
             alt={item.name}
             width={150}
             height={150}
-            className='object-contain'
+            className='object-contain w-full h-full'
           />
         );
       default:
@@ -66,9 +66,9 @@ const Carousel: React.FC<CarouselProps> = ({ media, isAutoSlide }) => {
   };
 
   return (
-    <div className='relative w-full'>
-      <div className='flex items-center justify-center overflow-hidden'>
-        {media.map((item) => renderMedia(item))}
+    <div className='relative w-full h-full'>
+      <div className='h-full overflow-hidden'>
+        {renderMedia(media[currentIndex])}
       </div>
       <Button
         onClick={handlePrevious}
