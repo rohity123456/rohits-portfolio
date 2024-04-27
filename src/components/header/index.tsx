@@ -4,8 +4,9 @@ import { useEffect, useRef, useState } from 'react';
 import styles from './index.module.scss';
 import { IoMenuSharp, IoCloseCircleOutline } from 'react-icons/io5';
 import { FaMoon, FaSun } from 'react-icons/fa';
-import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import usePathValue from '@/hooks/usePathValue';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -62,6 +63,7 @@ interface NavBarProps {
   handleLinkClick: (e: React.MouseEvent<HTMLUListElement>) => void;
 }
 const NavBar: React.FC<NavBarProps> = ({ isOpen, handleLinkClick }) => {
+  const { path } = usePathValue();
   const links = [
     { name: 'Home', href: '/' },
     { name: 'Skills', href: '/#skills' },
@@ -70,7 +72,6 @@ const NavBar: React.FC<NavBarProps> = ({ isOpen, handleLinkClick }) => {
     { name: 'About', href: '/#about' },
     { name: 'Contact', href: '/#contact' }
   ];
-  const path = usePathname();
 
   return (
     <nav
@@ -81,18 +82,18 @@ const NavBar: React.FC<NavBarProps> = ({ isOpen, handleLinkClick }) => {
       } ${styles.nav}`}
     >
       <ul className={styles.ul} onClick={handleLinkClick}>
-        {links.map((link) => (
-          <li
-            key={link.name}
-            className={`${styles.li} ${
-              path.includes(link.href) ? 'text-primary' : ''
-            }`}
-          >
-            <Link href={link.href} className='hover:text-primary'>
-              {link.name}
-            </Link>
-          </li>
-        ))}
+        {links.map((link) => {
+          return (
+            <li
+              key={link.name}
+              className={`${link.href == path ? 'text-primary' : ''}`}
+            >
+              <Link href={link.href} className='hover:text-primary'>
+                {link.name}
+              </Link>
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );
