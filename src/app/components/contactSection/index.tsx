@@ -109,7 +109,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
 }) => {
   return (
     <div className='container mx-auto px-6 pb-6'>
-      <form className='mt-8 max-w-md mx-auto' onSubmit={handleSubmit}>
+      <form className='max-w-md mx-auto' onSubmit={handleSubmit}>
         {error && (
           <div className='flex flex-col mb-2'>
             <div
@@ -181,50 +181,53 @@ const ContactForm: React.FC<ContactFormProps> = ({
 const ContactDetails: React.FC = () => {
   const ContactInfo = ({
     icon,
-    text
+    text,
+    link
   }: {
     icon: React.ReactNode;
     text: React.ReactNode;
+    link?: string;
   }) => {
     return (
-      <div className='flex items-center mb-4 bg-gray-500 rounded px-2 py-4'>
-        <div className='mr-4'>{icon}</div>
+      <a
+        href={link}
+        target='_blank'
+        className='flex items-center mb-4 dark:bg-gray-500 bg-gray-300 rounded px-2 py-4'
+      >
+        <div className='mr-3'>{icon}</div>
         <p className='text-sm sm:text-base'>{text}</p>
-      </div>
+      </a>
     );
   };
 
   const contactList = [
     {
       icon: <FcGoogle size={25} />,
-      item: <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+      item: <p className='text-lg'>{EMAIL}</p>,
+      link: `mailto:${EMAIL}`
     },
     {
       icon: <FaLinkedin size={25} className='text-blue-500' />,
-      item: (
-        <a href={LINKEDIN} target='_blank'>
-          LinkedIn
-        </a>
-      )
+      item: <p className='text-lg'>LinkedIn</p>,
+      link: LINKEDIN
     },
     {
       icon: <FaGithub size={25} className='text-black dark:text-white' />,
-      item: (
-        <a href={GITHUB} target='_blank'>
-          Github
-        </a>
-      )
+      item: <p className='text-lg'>Github</p>,
+      link: GITHUB
     }
   ];
 
   return (
     <div className='container mx-auto px-6 pb-20'>
-      <p className='text-sm sm:text-base mt-2'>
-        Feel free to reach out to me at :
-      </p>
       <div className='mt-4'>
         {contactList.map((contact, index) => (
-          <ContactInfo key={index} icon={contact.icon} text={contact.item} />
+          <ContactInfo
+            key={index}
+            icon={contact.icon}
+            text={contact.item}
+            link={contact.link}
+          />
         ))}
       </div>
     </div>

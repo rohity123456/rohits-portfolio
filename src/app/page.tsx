@@ -24,11 +24,11 @@ export default function Home() {
       <HeroSection />
       {sections.map((section) => (
         <section
-          className='card'
+          className='shadow-lg pb-6 mx-6'
           key={section.name}
           id={section.name.toLowerCase()}
         >
-          <h2 className='text-2xl font-bold text-center my-4'>
+          <h2 className='text-2xl font-bold text-center my-4 mt-8'>
             {section.name}
           </h2>
           {section.component}
