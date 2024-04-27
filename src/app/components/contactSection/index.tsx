@@ -203,17 +203,17 @@ const ContactDetails: React.FC = () => {
   const contactList = [
     {
       icon: <FcGoogle size={25} />,
-      item: <p className='text-lg'>{EMAIL}</p>,
+      item: <p className='text-[15px]'>{EMAIL}</p>,
       link: `mailto:${EMAIL}`
     },
     {
       icon: <FaLinkedin size={25} className='text-blue-500' />,
-      item: <p className='text-lg'>LinkedIn</p>,
+      item: <p className='text-[15px]'>LinkedIn</p>,
       link: LINKEDIN
     },
     {
       icon: <FaGithub size={25} className='text-black dark:text-white' />,
-      item: <p className='text-lg'>Github</p>,
+      item: <p className='text-[15px]'>Github</p>,
       link: GITHUB
     }
   ];
