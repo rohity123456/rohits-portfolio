@@ -4,7 +4,7 @@ import { EMAIL, GITHUB, LINKEDIN } from '@/constants';
 import useScrollTransition from '@/hooks/useScrollTransition';
 import { sendContact } from '@/service/contact';
 import React, { useState } from 'react';
-import { FaGithub, FaGoogle, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 
 const ContactSection = () => {
@@ -81,7 +81,7 @@ const ContactSection = () => {
             loading={loading}
             error={error}
           />
-          <h1>OR</h1>
+          <h1 className='text-2xl'>OR</h1>
           <ContactDetails />
         </div>
       </section>
