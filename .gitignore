@@ -37,3 +37,4 @@ next-env.d.ts
 
 pushFirebase.js
 .vscode
+.lsp/*

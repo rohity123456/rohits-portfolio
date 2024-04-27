@@ -22,3 +22,20 @@ export type MediaObject = {
   name: string;
   poster?: string;
 };
+
+export type Contact = {
+  name: string;
+  email: string;
+  message: string;
+};
+
+type APIError = {
+  message: string;
+  details: string;
+};
+
+export type APIResponse = {
+  data?: any;
+  success: boolean;
+  error?: APIError;
+};

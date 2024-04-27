@@ -6,13 +6,15 @@ type SnackbarProps = {
   isOpen: boolean;
   duration?: number;
   onClose: () => void;
+  type?: 'success' | 'error' | 'info';
 };
 
 const Snackbar = ({
   message,
   isOpen,
   duration = 3000,
-  onClose
+  onClose,
+  type = 'info'
 }: SnackbarProps) => {
   useEffect(() => {
     if (isOpen) {
@@ -25,9 +27,18 @@ const Snackbar = ({
 
   if (!isOpen) return null;
 
+  const alertTypeCls =
+    type === 'success'
+      ? 'alert-success'
+      : type === 'error'
+      ? 'alert-error'
+      : 'alert-info';
+
   return (
-    <div className={`alert alert-info shadow-lg`}>
-      <span>{message}</span>
+    <div className='transform-center-x z-50 fixed max-w-lg top-4'>
+      <div className={`alert ${alertTypeCls} shadow-lg animate-bounce`}>
+        <span>{message}</span>
+      </div>
     </div>
   );
 };
