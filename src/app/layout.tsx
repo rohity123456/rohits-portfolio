@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <ThemeProvider>
       <html lang='en'>
-        <body className={inter.className}>
+        <body className={`${inter.className} w-full`}>
           <Header />
           <main>{children}</main>
         </body>

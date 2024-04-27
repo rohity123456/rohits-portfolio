@@ -41,7 +41,7 @@ const HeroSection = () => {
             </a>
           </div>
         </div>
-        <div className='w-[400px] h-[400px] relative'>
+        <div className='max-w-[400px] max-h-[400px] w-full h-full relative'>
           <Image
             className='p-2 py-4 mx-auto object-cover rounded-[30px]'
             layout='fill'
