@@ -195,7 +195,7 @@ const ContactDetails: React.FC = () => {
         className='flex items-center mb-4 dark:bg-gray-500 bg-gray-300 rounded px-2 py-4'
       >
         <div className='mr-3'>{icon}</div>
-        <p className='text-sm sm:text-base'>{text}</p>
+        <span className='text-sm sm:text-base'>{text}</span>
       </a>
     );
   };
@@ -203,17 +203,17 @@ const ContactDetails: React.FC = () => {
   const contactList = [
     {
       icon: <FcGoogle size={25} />,
-      item: <p className='text-[15px]'>{EMAIL}</p>,
+      item: <span className='text-[15px]'>{EMAIL}</span>,
       link: `mailto:${EMAIL}`
     },
     {
       icon: <FaLinkedin size={25} className='text-blue-500' />,
-      item: <p className='text-[15px]'>LinkedIn</p>,
+      item: <span className='text-[15px]'>LinkedIn</span>,
       link: LINKEDIN
     },
     {
       icon: <FaGithub size={25} className='text-black dark:text-white' />,
-      item: <p className='text-[15px]'>Github</p>,
+      item: <span className='text-[15px]'>Github</span>,
       link: GITHUB
     }
   ];

@@ -15,7 +15,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         <div className='card-actions justify-end'>
           <a
             href={repoUrl}
-            className='btn bg-primary text-secondary-content'
+            className='btn bg-primary text-secondary hover:text-primary'
             target='_blank'
           >
             Code
