@@ -18,21 +18,21 @@ const ContactSection = () => {
       document.getElementById('name') as HTMLInputElement
     ).value?.trim();
     if (!name || name.length < 1 || name.length > 50) {
-      setError('Please enter a name between 1 and 50 characters');
+      setError('Please enter your name between 1 and 50 characters');
       return;
     }
     const email =
       (document.getElementById('email') as HTMLInputElement).value || '';
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      setError('Please enter a valid email address');
+      setError('Please enter your valid email address');
       return;
     }
     const message = (
       document.getElementById('message') as HTMLTextAreaElement
     ).value?.trim();
     if (!message || message.length < 1 || message.length > 1000) {
-      setError('Please enter a message between 1 and 1000 characters');
+      setError('Please enter your message between 1 and 1000 characters');
       return;
     }
     return { name, email, message };
@@ -75,7 +75,7 @@ const ContactSection = () => {
         }`}
         ref={domRef}
       >
-        <div className='flex justify-center items-center'>
+        <div className='flex justify-center items-center flex-col sm:flex-row'>
           <ContactForm
             handleSubmit={handleSubmit}
             loading={loading}
@@ -108,7 +108,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
   error
 }) => {
   return (
-    <div className='container mx-auto px-6 pb-20'>
+    <div className='container mx-auto px-6 pb-6'>
       <form className='mt-8 max-w-md mx-auto' onSubmit={handleSubmit}>
         {error && (
           <div className='flex flex-col mb-2'>
@@ -123,7 +123,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
         <div className='flex flex-col mb-2'>
           <label
             htmlFor='name'
-            className='mb-1 text-xs sm:text-sm tracking-wide text-gray-600'
+            className='mb-1 text-xs sm:text-sm tracking-wide'
           >
             Name:
           </label>
@@ -131,13 +131,13 @@ const ContactForm: React.FC<ContactFormProps> = ({
             id='name'
             type='text'
             name='name'
-            className='text-sm sm:text-base placeholder-gray-500 px-4 py-2 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-400'
+            className='text-sm sm:text-base px-4 py-2 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-400'
           />
         </div>
         <div className='flex flex-col mb-2'>
           <label
             htmlFor='email'
-            className='mb-1 text-xs sm:text-sm tracking-wide text-gray-600'
+            className='mb-1 text-xs sm:text-sm tracking-wide'
           >
             Email:
           </label>
@@ -145,20 +145,20 @@ const ContactForm: React.FC<ContactFormProps> = ({
             id='email'
             type='email'
             name='email'
-            className='text-sm sm:text-base placeholder-gray-500 px-4 py-2 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-400'
+            className='text-sm sm:text-base px-4 py-2 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-400'
           />
         </div>
         <div className='flex flex-col mb-6'>
           <label
             htmlFor='message'
-            className='mb-1 text-xs sm:text-sm tracking-wide text-gray-600'
+            className='mb-1 text-xs sm:text-sm tracking-wide'
           >
             Message:
           </label>
           <textarea
             id='message'
             name='message'
-            className='text-sm sm:text-base placeholder-gray-500 px-4 py-2 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-400'
+            className='text-sm sm:text-base px-4 py-2 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-400'
             rows={3}
           ></textarea>
         </div>
@@ -219,7 +219,7 @@ const ContactDetails: React.FC = () => {
 
   return (
     <div className='container mx-auto px-6 pb-20'>
-      <p className='text-sm sm:text-base text-gray-600 mt-2'>
+      <p className='text-sm sm:text-base mt-2'>
         Feel free to reach out to me at :
       </p>
       <div className='mt-4'>
