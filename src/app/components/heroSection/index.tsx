@@ -34,6 +34,7 @@ const HeroSection = () => {
           <div className='flex justify-center md:justify-start mt-4'>
             <a
               href={RESUME_LINK}
+              target='_blank'
               className='p-2 px-4 font-semibold border rounded text-primary border-primary hover:bg-primary hover:text-secondary hover:border-secondary'
             >
               Download Resume
