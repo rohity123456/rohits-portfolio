@@ -1,4 +1,5 @@
 'use client';
+import { RESUME_LINK } from '@/constants';
 import { useTheme } from '@/contexts/theme';
 import Image from 'next/image';
 
@@ -32,7 +33,7 @@ const HeroSection = () => {
           </p>
           <div className='flex justify-center md:justify-start mt-4'>
             <a
-              href='#'
+              href={RESUME_LINK}
               className='p-2 px-4 font-semibold border rounded text-primary border-primary hover:bg-primary hover:text-secondary hover:border-secondary'
             >
               Download Resume
