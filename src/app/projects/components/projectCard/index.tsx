@@ -5,7 +5,7 @@ import Carousel from '@/components/carousel';
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   const { title, description, repoUrl, mediaList } = project;
   return (
-    <div className='card w-96 bg-base-100 shadow-xl'>
+    <div className='card w-96 dark:bg-zinc-700 bg-gray-300 shadow-xl'>
       <div className='card-body w-full h-72'>
         <Carousel media={mediaList} isAutoSlide={true} />
       </div>
@@ -13,7 +13,11 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         <h2 className='card-title'>{title}</h2>
         <p>{description}</p>
         <div className='card-actions justify-end'>
-          <a href={repoUrl} className='btn' target='_blank'>
+          <a
+            href={repoUrl}
+            className='btn bg-primary text-secondary-content'
+            target='_blank'
+          >
             Code
           </a>
         </div>
