@@ -146,7 +146,7 @@ const getSkills = (): SkillsSection[] => {
           category: 'soft-skills'
         },
         {
-          name: 'Problem Solving',
+          name: 'Quick Learner',
           icon: <MdOutlineJoinFull size={25} className='text-purple-500' />,
           category: 'soft-skills'
         }
