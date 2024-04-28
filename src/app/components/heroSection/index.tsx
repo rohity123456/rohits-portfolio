@@ -28,8 +28,10 @@ const HeroSection = () => {
             <span className='text-red-950 dark:text-red-300 font-bold text-lg mt-1'>
               {'<Fullstack Engineer/>'}
             </span>{' '}
-            who loves crafting polished web experiences. Specializing in React
-            and Next.js, I focus on writing clean, elegant and efficient code.
+            who loves crafting polished user software experiences. Specializing
+            in MERN stack and Python Stack with solid grip on AWS
+            infrasturcture, I focus on delivering high-quality, performant, and
+            maintainable products from concept to production.
           </p>
           <div className='flex justify-center md:justify-start mt-4'>
             <a
