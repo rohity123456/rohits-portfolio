@@ -75,7 +75,7 @@ const ContactSection = () => {
         }`}
         ref={domRef}
       >
-        <div className='flex justify-center items-center flex-col sm:flex-row'>
+        <div className='flex justify-center items-center flex-col sm:flex-row mx-auto'>
           <ContactForm
             handleSubmit={handleSubmit}
             loading={loading}
@@ -108,8 +108,8 @@ const ContactForm: React.FC<ContactFormProps> = ({
   error
 }) => {
   return (
-    <div className='container mx-auto px-6 pb-6'>
-      <form className='max-w-md mx-auto' onSubmit={handleSubmit}>
+    <div className='px-6 pb-6'>
+      <form className='max-w-md' onSubmit={handleSubmit}>
         {error && (
           <div className='flex flex-col mb-2'>
             <div
@@ -219,7 +219,7 @@ const ContactDetails: React.FC = () => {
   ];
 
   return (
-    <div className='container mx-auto px-6 pb-20'>
+    <div className='px-6 pb-20 max-w-80'>
       <div className='mt-4'>
         {contactList.map((contact, index) => (
           <ContactInfo
