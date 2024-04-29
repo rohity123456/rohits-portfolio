@@ -7,7 +7,7 @@ export const getExperiences = async () => {
     const experienceCollection = collection(firestoreDb, 'experiences');
     const experienceSnapshot = await getDocs(experienceCollection);
     const experiences = await experienceSnapshot.docs.map(
-      (doc) => doc.data() as Experience
+      (doc) => ({ ...doc.data(), id: doc.id } as Experience)
     );
     experiences.sort((a, b) =>
       new Date(b.startDate) > new Date(a.startDate) ? 1 : -1
