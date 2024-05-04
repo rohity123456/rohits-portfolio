@@ -5,7 +5,6 @@ import styles from './index.module.scss';
 import { IoMenuSharp, IoCloseCircleOutline } from 'react-icons/io5';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import usePathValue from '@/hooks/usePathValue';
 
 const Header = () => {
@@ -34,7 +33,7 @@ const Header = () => {
       className='bg-gray-300 dark:bg-zinc-800 min-h-12 sticky top-0 z-10 flex border-b-[1px] border-b-gray-800 dark:border-b-gray-600'
       ref={headerRef}
     >
-      <div className='container mx-auto flex justify-center items-center'>
+      <div className='mx-auto flex justify-center items-center'>
         <div
           className='sm:hidden absolute left-2 cursor-pointer top-1/2 -translate-y-1/2'
           onClick={() => setTimeout(() => setIsOpen(!isOpen), 0)}

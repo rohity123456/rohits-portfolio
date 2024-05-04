@@ -15,7 +15,7 @@ const HeroSection = () => {
             : "url('./images/bg_dark.webp')"
         }`
       }}
-      className='hero bg-white dark:bg-gray-900 w-screen min-h-screen'
+      className='hero bg-white dark:bg-gray-900 min-h-screen'
     >
       <div className='hero-overlay bg-opacity-60'></div>
       <div className='flex flex-col md:flex-row items-center justify-center w-full h-full'>
