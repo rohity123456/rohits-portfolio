@@ -21,7 +21,7 @@ export default function RootLayout({
     <ThemeProvider>
       <html lang='en'>
         <body className={`${inter.className} grid place-items-center`}>
-          <div className='w-full max-w-[1400px]'>
+          <div className='w-full max-w-[1920px]'>
             <div className=''>
               <Header />
               <main>{children}</main>
