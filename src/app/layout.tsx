@@ -20,11 +20,11 @@ export default function RootLayout({
   return (
     <ThemeProvider>
       <html lang='en'>
-        <body className={`${inter.className} grid place-items-center`}>
+        <body className={`${inter.className} 2xl:grid place-items-center`}>
           <div className='w-full max-w-[1920px]'>
-            <div className=''>
+            <div className='w-full'>
               <Header />
-              <main>{children}</main>
+              <main className='w-full'>{children}</main>
             </div>
           </div>
         </body>
