@@ -30,7 +30,7 @@ const HeroSection = () => {
             </span>{' '}
             who loves crafting polished user software experiences. Specializing
             in MERN stack and Python Stack with solid grip on AWS
-            infrasturcture, I focus on delivering high-quality, performant, and
+            infrastructure, I focus on delivering high-quality, performant, and
             maintainable products from concept to production.
           </p>
           <div className='flex justify-center md:justify-start mt-4'>
